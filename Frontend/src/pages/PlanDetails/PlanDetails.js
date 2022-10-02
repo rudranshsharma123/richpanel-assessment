@@ -21,7 +21,7 @@ function PlanDetails() {
     }, [])
 
     const cancelSub = async () => {
-        const res = await axios.post('http://localhost:8282/cancel', {
+        const res = await axios.post('https://richpanel-backend-test.herokuapp.com/cancel', {
             custID: userData.stripeID
         })
         console.log(res.data)

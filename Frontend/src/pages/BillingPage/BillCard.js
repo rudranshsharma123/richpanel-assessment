@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { DataStore } from '../../context/DataContext'
 function BillCard({ planName, monthlyPrice, yearlyPrice, isMonthly, user }) {
-    const baseUrl = "http://localhost:8282/checkout"
+    const baseUrl = "https://richpanel-backend-test.herokuapp.com/checkout"
     const { addCustomerData } = DataStore();
     var tabletOpacity = "opacity-100"
     var mobileOpacity = "opacity-100"
@@ -78,7 +78,7 @@ function BillCard({ planName, monthlyPrice, yearlyPrice, isMonthly, user }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://localhost:8282/checkout', {
+        const res = await axios.post('https://richpanel-backend-test.herokuapp.com/checkout', {
             name: user.displayName,
             email: user.email,
             desc: 'test customer',

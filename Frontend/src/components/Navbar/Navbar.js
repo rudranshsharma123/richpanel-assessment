@@ -27,8 +27,6 @@ const Navbar = () => {
                         SignUp
                     </NavLink>
 
-                    {/* Second Nav */}
-                    {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
                 </NavMenu>
 
                 <button onClick={async () => { await logOut() }}>Log Out</button>
